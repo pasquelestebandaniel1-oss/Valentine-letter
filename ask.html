@@ -2,46 +2,80 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Mi carta para ti 💕</title>
-<link rel="stylesheet" href="styles.css">
+<title>❤️ Carta de Amor ❤️</title>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  height: 100vh;
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #e91e63;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #444;
+  font-size: 18px;
+  margin: 10px 20px;
+}
+
+button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s;
+}
+button:hover {
+  background: #d81b60;
+}
+</style>
 </head>
 <body>
 
-<div class="letter fade-in">
-  <h2>Amorcito 💖</h2>
+<img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Love GIF">
 
-  <p>
-    Amorcito, mi niña hermosa, mi princesa, mi todo 💖
-  </p>
+<h2>¿Quieres leer algo especial para ti? 💖</h2>
+<p>Te preparé unas palabras que vienen desde mi corazón…</p>
 
-  <p>
-    Aunque estemos lejos, mi corazón no sabe de distancias.
-    Hay días especiales que no se miden por el lugar,
-    sino por la persona con la que quieres compartirlos,
-    y para mí la única opción siempre serás tú.
-  </p>
+<button onclick="mostrarCarta()">Sí 💗</button>
+<button onclick="noMostrar()">No 💔</button>
 
-  <p>
-    Puede que no podamos vernos todavía,
-    pero aun así me encantaría que este día
-    estemos unidos de alguna forma,
-    pensándonos, eligiéndonos,
-    como lo hacemos cada día,
-    incluso desde lejos sin importar la distancia.
-  </p>
+<script>
+function mostrarCarta() {
+  document.body.innerHTML = `
+    <h2>Mi carta para ti 💖</h2>
+    <p>Amorcito, mi niña hermosa, mi princesa, mi todo 💖</p>
+    <p>Aunque estemos lejos, mi corazón no sabe de distancias, hay días especiales que no se miden por el lugar, sino por la persona con la que quieres compartirlos, y para mí la única opción siempre serás tú.</p>
+    <p>Puede que no podamos vernos, todavía, pero aun así me encantaría que este día estemos unidos de alguna forma, pensándonos, eligiéndonos, como lo hacemos cada día, incluso desde lejos sin importar la distancia.</p>
+    <p>Porque no necesito tenerte frente a mí para saber que quiero que seas tú, hoy, mañana y siempre.</p>
+    <p><strong>Te amo mi goshpa hermosa 💗</strong></p>
+  `;
+}
 
-  <p>
-    Porque no necesito tenerte frente a mí
-    para saber que quiero que seas tú,
-    hoy, mañana y siempre.
-  </p>
-
-  <p class="signature">
-    Te amo mi goshpa hermosa 💗
-  </p>
-</div>
-
-<div class="hearts"></div>
+function noMostrar() {
+  alert("Está bien, igual te quiero mucho 💞");
+}
+</script>
 
 </body>
 </html>
