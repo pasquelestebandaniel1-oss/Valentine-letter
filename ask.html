@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi carta para ti 💖</title>
+</head>
+<body>
+
+<h2>Mi amor 💗</h2>
+
+<p>Presiona el botón para descargar mi carta.</p>
+
+<button onclick="descargar()">Descargar carta 💌</button>
+
+<script>
+function descargar(){
+const texto = `Amorcito, mi niña hermosa, mi princesa, mi todo 💖
+
+Aunque estemos lejos, mi corazón no sabe de distancias, hay días especiales que no se miden por el lugar, sino por la persona con la que quieres compartirlos, y para mí la única opción siempre serás tú
+
+Puede que no podamos vernos, todavía, pero aun así me encantaría que este día estemos unidos de alguna forma, pensándonos, eligiéndonos, como lo hacemos cada día, incluso desde lejos sin importar la distancia
+
+Porque no necesito tenerte frente a mí para saber que quiero que seas tú, hoy, mañana y siempre
+
+Te amo mi goshpa hermosa 💗`;
+const blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+const enlace = document.createElement("a");
+enlace.href = URL.createObjectURL(blob);
+enlace.download = "Carta_para_ti.txt";
+enlace.click();
+}
+</script>
+
+</body>
+</html>
